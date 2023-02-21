@@ -1,0 +1,30 @@
+@import './../../../theme.css';
+
+#logo {
+  cursor: pointer;
+}
+
+.navbar {
+  justify-content: space-between;
+  background-color: #000;
+  height: 100px;
+}
+
+a {
+  text-decoration: none;
+  padding-right: 2rem;
+  cursor: pointer;
+  color: white;
+  transition: .35s;
+  font-size: 1.2rem;
+  font-weight: 600;
+  align-items: end;
+}
+
+a:hover {
+  color: #abb8c3;
+}
+
+a:hover > :not(:hover) {
+  transform: scale(0.9);
+}

@@ -1,0 +1,24 @@
+<mat-toolbar class="navbar">
+  <img
+    width="300"
+    height="77"
+    alt="Keep Talking and Nobody Explodes"
+    id="logo"
+    data-height-percentage="77"
+    class="lazy loaded"
+    data-actual-width="300"
+    data-actual-height="77"
+    routerLink="/home"
+    [ngSrc]="urlPhoto"
+  >
+  <div >
+    <a
+      *ngFor="let itemMenu of sideMenu"
+      [routerLink]="itemMenu.route"
+      (click)="redireciona(itemMenu.url)"
+    >
+      {{ itemMenu.name }}
+    </a>
+  </div>
+
+</mat-toolbar>

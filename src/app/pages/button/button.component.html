@@ -1,0 +1,64 @@
+<!--<img mat-card-image src="assets/images/button_default.png">-->
+<div id="container">
+  <section>
+    <form [formGroup]="formButton">
+      <mat-form-field appearance="fill" class="field">
+        <mat-label>Cor do Botão</mat-label>
+          <mat-select formControlName="buttonColor" (valueChange)="alteraCorBotao($event)">
+            <mat-option *ngFor="let color of colors" [value]="color.value">
+              {{color.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      <mat-form-field appearance="fill" class="field">
+        <mat-label>Texto do Botão</mat-label>
+        <mat-select formControlName="buttonText" (valueChange)="alteraTextoBotao($event)">
+          <mat-option *ngFor="let text of texts" [value]="text.value">
+            {{text.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="field">
+        <mat-label>Quantidade de Pilhas</mat-label>
+        <input matInput type="number" class="no-spinners">
+      </mat-form-field>
+    </form>
+  </section>
+
+  <section>
+    <form [formGroup]="formLed">
+      <mat-form-field appearance="fill" class="field">
+        <mat-label>Indicador</mat-label>
+        <mat-select formControlName="indicator">
+          <mat-option *ngFor="let indicator of indicators" [value]="indicator">
+            {{indicator}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-checkbox class="example-margin" formControlName="on">Aceso</mat-checkbox>
+
+      <button mat-raised-button class="example-margin" (click)="adicionaLed()">Adicionar Led</button>
+    </form>
+
+    <mat-selection-list>
+      <mat-list-option *ngFor="let led of leds">
+        {{led.indicator}} - {{led.on}}
+      </mat-list-option>
+    </mat-selection-list>
+  </section>
+
+  <section>
+
+    <button
+      mat-mini-fab
+      [ngStyle]="{ backgroundColor: buttonBackgroundColorImage, color: buttonColorImage }"
+      class="principal-button"
+    >
+      {{buttonText}}
+    </button>
+
+  </section>
+</div>

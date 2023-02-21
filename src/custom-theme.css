@@ -1,0 +1,19 @@
+@import 'theme.css';
+
+:root {
+  --custom-primary: var(--primary-color);
+  --custom-accent: var(--accent-color);
+  --custom-warn: var(--warn-color);
+}
+
+.mat-primary {
+  color: var(--custom-primary) !important;
+}
+
+.mat-accent {
+  color: var(--custom-accent) !important;
+}
+
+.mat-warn {
+  color: var(--custom-warn) !important;
+}

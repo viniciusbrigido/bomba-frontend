@@ -1,0 +1,27 @@
+#container {
+  width: 100%;
+  height: calc(100% - 100px);
+  background-color: #303030;
+}
+
+.field {
+  margin: 10px;
+}
+
+.principal-button {
+  height: 200px;
+  width: 200px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  border: 2px solid #ccc;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.example-margin {
+  margin-left: 12px;
+}

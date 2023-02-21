@@ -1,0 +1,11 @@
+.container {
+  height: calc(100vh - 100px);
+  background-color: #303030;
+  overflow-y: scroll;
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

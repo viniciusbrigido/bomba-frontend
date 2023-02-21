@@ -1,0 +1,17 @@
+mat-card {
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 4px;
+  background: #424242;
+  margin: 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+mat-card-header {
+  background-color: #424242;
+  color: white;
+}
+
+mat-card-content {
+  color: #ffffffb3;
+}

@@ -1,0 +1,7 @@
+<div class="container" routerLink="button">
+  <div class=main-box>
+    <div *ngFor="let itemModule of modules">
+      <app-module-card [itemModule]="itemModule" [routerLink]="itemModule.route"></app-module-card>
+    </div>
+  </div>
+</div>
