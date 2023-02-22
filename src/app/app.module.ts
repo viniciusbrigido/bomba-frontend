@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { NgOptimizedImage } from '@angular/common';
-import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -17,7 +17,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './app.component';
@@ -25,6 +28,18 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ModuleCardComponent } from './components/module-card/module-card.component';
 import { ButtonComponent } from './pages/button/button.component';
+import { WireComponent } from './pages/wire/wire.component';
+import { KeypadsComponent } from './pages/keypads/keypads.component';
+import { SimonSaysComponent } from './pages/simon-says/simon-says.component';
+import { WhosOnFirstComponent } from './pages/whos-on-first/whos-on-first.component';
+import { MemoryComponent } from './pages/memory/memory.component';
+import { MorseCodeComponent } from './pages/morse-code/morse-code.component';
+import { ComplicatedWireComponent } from './pages/complicated-wire/complicated-wire.component';
+import { WireSequenceComponent } from './pages/wire-sequence/wire-sequence.component';
+import { MazeComponent } from './pages/maze/maze.component';
+import { PasswordComponent } from './pages/password/password.component';
+import { ButtonModalComponent } from './components/button-modal/button-modal.component';
+import { MessageModalComponent } from './components/message-modal/message-modal.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +49,25 @@ import { ButtonComponent } from './pages/button/button.component';
     AboutComponent,
     ModuleCardComponent,
     ButtonComponent,
+    WireComponent,
+    KeypadsComponent,
+    SimonSaysComponent,
+    WhosOnFirstComponent,
+    MemoryComponent,
+    MorseCodeComponent,
+    ComplicatedWireComponent,
+    WireSequenceComponent,
+    MazeComponent,
+    PasswordComponent,
+    ButtonModalComponent,
+    MessageModalComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     RouterOutlet,
+    HttpClientModule,
     MatToolbarModule,
     NgOptimizedImage,
     MatTooltipModule,
@@ -54,7 +82,10 @@ import { ButtonComponent } from './pages/button/button.component';
     MatChipsModule,
     MatListModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    FormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

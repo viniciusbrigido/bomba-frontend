@@ -1,57 +1,69 @@
-<!--<img mat-card-image src="assets/images/button_default.png">-->
 <div id="container">
   <section>
-    <form [formGroup]="formButton">
-      <mat-form-field appearance="fill" class="field">
-        <mat-label>Cor do Botão</mat-label>
-          <mat-select formControlName="buttonColor" (valueChange)="alteraCorBotao($event)">
-            <mat-option *ngFor="let color of colors" [value]="color.value">
-              {{color.name}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Cor do Botão</mat-label>
+      <mat-select [(ngModel)]="buttonColor" (valueChange)="alteraCorBotao($event)">
+        <mat-option *ngFor="let color of colors" [value]="color.value">
+          {{color.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-      <mat-form-field appearance="fill" class="field">
-        <mat-label>Texto do Botão</mat-label>
-        <mat-select formControlName="buttonText" (valueChange)="alteraTextoBotao($event)">
-          <mat-option *ngFor="let text of texts" [value]="text.value">
-            {{text.name}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Texto do Botão</mat-label>
+      <mat-select [(ngModel)]="buttonText" (valueChange)="alteraTextoBotao($event)">
+        <mat-option *ngFor="let text of texts" [value]="text.value">
+          {{text.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-      <mat-form-field appearance="fill" class="field">
-        <mat-label>Quantidade de Pilhas</mat-label>
-        <input matInput type="number" class="no-spinners">
-      </mat-form-field>
-    </form>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Quantidade de Pilhas</mat-label>
+      <input matInput [(ngModel)]="pilha" type="number" class="no-spinners">
+    </mat-form-field>
   </section>
 
   <section>
-    <form [formGroup]="formLed">
-      <mat-form-field appearance="fill" class="field">
-        <mat-label>Indicador</mat-label>
-        <mat-select formControlName="indicator">
-          <mat-option *ngFor="let indicator of indicators" [value]="indicator">
-            {{indicator}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Indicador</mat-label>
+      <mat-select [(ngModel)]="indicatorName">
+        <mat-option *ngFor="let indicator of indicators" [value]="indicator">
+          {{indicator}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-      <mat-checkbox class="example-margin" formControlName="on">Aceso</mat-checkbox>
+    <mat-checkbox class="button-margin" [(ngModel)]="on">Aceso</mat-checkbox>
 
-      <button mat-raised-button class="example-margin" (click)="adicionaLed()">Adicionar Led</button>
-    </form>
+    <button mat-raised-button class="button-margin" (click)="adicionaLed()">Adicionar Led</button>
 
-    <mat-selection-list>
-      <mat-list-option *ngFor="let led of leds">
-        {{led.indicator}} - {{led.on}}
-      </mat-list-option>
-    </mat-selection-list>
+    <mat-table [dataSource]="leds">
+      <ng-container matColumnDef="indicator">
+        <mat-header-cell *matHeaderCellDef> Indicador </mat-header-cell>
+        <mat-cell *matCellDef="let led"> {{led.indicator}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="on">
+        <mat-header-cell *matHeaderCellDef> Aceso </mat-header-cell>
+        <mat-cell *matCellDef="let led">
+          <mat-icon>{{ led.on ? 'check' : 'close' }}</mat-icon>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let item" style="width: 10px">
+          <mat-icon aria-label="Excluir item" color="warn" (click)="removeLed(item)">delete</mat-icon>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
   </section>
 
   <section>
-
     <button
       mat-mini-fab
       [ngStyle]="{ backgroundColor: buttonBackgroundColorImage, color: buttonColorImage }"
@@ -59,6 +71,9 @@
     >
       {{buttonText}}
     </button>
+  </section>
 
+  <section>
+    <button mat-raised-button class="button-margin" (click)="resolve()">Resolver</button>
   </section>
 </div>
