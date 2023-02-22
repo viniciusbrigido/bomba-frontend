@@ -1,0 +1,20 @@
+<div id="container">
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Cor do Botão</mat-label>
+    <mat-select [(ngModel)]="ledColor">
+      <mat-option *ngFor="let color of colors" [value]="color.value">
+        {{color.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <section>
+    <button
+      mat-raised-button
+      class="solver-button"
+      (click)="resolveSecondStep()"
+    >
+      Resolver
+    </button>
+  </section>
+</div>
