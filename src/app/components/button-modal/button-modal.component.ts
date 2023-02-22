@@ -25,7 +25,7 @@ export class ButtonModalComponent {
   resolveSecondStep() {
     const data: ButtonResponseSecondStep = {
       id: this.data.id,
-      corLed: this.ledColor
+      ledColor: this.ledColor
     }
     this.buttonService.resolveSecondStep(data).subscribe((value: ButtonResponse) => {
       const dialog = this.dialog.open(MessageModalComponent, {

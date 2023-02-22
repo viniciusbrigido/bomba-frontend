@@ -24,7 +24,7 @@ export class ButtonComponent {
   buttonColorImage = 'black';
   buttonColor = '';
   buttonText = 'Abortar';
-  pilha = 0;
+  batteries = 0;
   indicatorName: Indicator | undefined;
   on = false;
 
@@ -40,10 +40,10 @@ export class ButtonComponent {
 
   resolve() {
     const button: Button = {
-      texto: this.buttonText,
-      corBotao: this.buttonColor,
+      text: this.buttonText,
+      buttonColor: this.buttonColor,
       leds: this.leds.data,
-      pilhas: this.pilha
+      batteries: this.batteries
     }
     this.buttonService.resolve(button).subscribe((value: ButtonResponse) => {
       let dialog;
@@ -63,14 +63,14 @@ export class ButtonComponent {
     this.buttonColorImage = 'black';
     this.buttonColor = '';
     this.buttonText = 'Abortar';
-    this.pilha = 0;
+    this.batteries = 0;
     this.indicatorName = undefined;
     this.on = false;
     this.leds.data = [];
     this.leds._updateChangeSubscription();
   }
 
-  adicionaLed() {
+  addLed() {
     if (this.indicatorName) {
       this.leds.data.push({ indicator: this.indicatorName, on: this.on });
       this.leds._updateChangeSubscription();
@@ -88,27 +88,27 @@ export class ButtonComponent {
     }
   }
 
-  alteraCorBotao(changeColor: any) {
+  changeButtonColor(changeColor: any) {
     if (!changeColor) {
       this.buttonBackgroundColorImage = '';
       this.buttonColorImage = '';
       return;
     }
-    const corFilter = this.colors.filter(item => item.value === changeColor);
+    const colorFilter = this.colors.filter(item => item.value === changeColor);
 
-    if (!corFilter) {
+    if (!colorFilter) {
       this.buttonBackgroundColorImage = '';
       this.buttonColorImage = '';
       return;
     }
 
-    const color = corFilter[0];
+    const color = colorFilter[0];
 
     this.buttonBackgroundColorImage = color.cssBackgroundColor;
     this.buttonColorImage = color.cssColor;
   }
 
-  alteraTextoBotao(changeText: any) {
+  changeButtonText(changeText: any) {
     if (!changeText) {
       this.buttonText = '';
       return;

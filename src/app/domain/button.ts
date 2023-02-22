@@ -2,10 +2,10 @@ import { Led } from './led';
 
 export interface Button {
   id?: string;
-  texto: string;
-  corBotao: string;
-  corLed?: string;
+  text: string;
+  buttonColor: string;
+  ledColor?: string;
   leds: Led[];
-  pilhas: number;
+  batteries: number;
   createdAt?: Date;
 }

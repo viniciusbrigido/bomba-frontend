@@ -2,7 +2,7 @@
   <section>
     <mat-form-field appearance="fill" class="field">
       <mat-label>Cor do Botão</mat-label>
-      <mat-select [(ngModel)]="buttonColor" (valueChange)="alteraCorBotao($event)">
+      <mat-select [(ngModel)]="buttonColor" (valueChange)="changeButtonColor($event)">
         <mat-option *ngFor="let color of colors" [value]="color.value">
           {{color.name}}
         </mat-option>
@@ -11,7 +11,7 @@
 
     <mat-form-field appearance="fill" class="field">
       <mat-label>Texto do Botão</mat-label>
-      <mat-select [(ngModel)]="buttonText" (valueChange)="alteraTextoBotao($event)">
+      <mat-select [(ngModel)]="buttonText" (valueChange)="changeButtonText($event)">
         <mat-option *ngFor="let text of texts" [value]="text.value">
           {{text.name}}
         </mat-option>
@@ -20,7 +20,7 @@
 
     <mat-form-field appearance="fill" class="field">
       <mat-label>Quantidade de Pilhas</mat-label>
-      <input matInput [(ngModel)]="pilha" type="number" class="no-spinners">
+      <input matInput [(ngModel)]="batteries" type="number" class="no-spinners">
     </mat-form-field>
   </section>
 
@@ -36,7 +36,7 @@
 
     <mat-checkbox class="button-margin" [(ngModel)]="on">Aceso</mat-checkbox>
 
-    <button mat-raised-button class="button-margin" (click)="adicionaLed()">Adicionar Led</button>
+    <button mat-raised-button class="button-margin" (click)="addLed()">Adicionar Led</button>
 
     <mat-table [dataSource]="leds">
       <ng-container matColumnDef="indicator">
