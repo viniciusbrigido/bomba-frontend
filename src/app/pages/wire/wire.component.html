@@ -1,1 +1,51 @@
-<div id="container"></div>
+<div id="container">
+
+  <section>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Serial</mat-label>
+      <input matInput [(ngModel)]="serial">
+    </mat-form-field>
+  </section>
+
+  <section>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Cor do Botão</mat-label>
+      <mat-select [(ngModel)]="color">
+        <mat-option *ngFor="let color of colors" [value]="color.value">
+          {{color.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button class="button-margin" (click)="addThread()">Adicionar Fio</button>
+  </section>
+
+  <section>
+    <mat-table [dataSource]="threads">
+      <ng-container matColumnDef="color">
+        <mat-header-cell *matHeaderCellDef> Cor </mat-header-cell>
+        <mat-cell *matCellDef="let led"> {{led.color}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell mat-cell *matCellDef="let item">
+          <mat-icon aria-label="Excluir item" color="warn" (click)="removeThread(item)">delete</mat-icon>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </section>
+
+  <section>
+  </section>
+
+  <section>
+    <button mat-raised-button class="button-margin" (click)="resolve()">Resolver</button>
+  </section>
+
+  <app-cable-solver></app-cable-solver>
+
+</div>

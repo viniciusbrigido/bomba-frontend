@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./complicated-wire.component.css']
 })
 export class ComplicatedWireComponent {
-
 }

@@ -1,0 +1,13 @@
+#solve {
+  height: 350px;
+  width: 350px;
+}
+
+#wire {
+  height: 100px;
+  width: 260px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 30px;
+}

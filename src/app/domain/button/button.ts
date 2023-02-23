@@ -1,4 +1,4 @@
-import { Led } from './led';
+import { Led } from '../led';
 
 export interface Button {
   id?: string;

@@ -40,6 +40,7 @@ import { MazeComponent } from './pages/maze/maze.component';
 import { PasswordComponent } from './pages/password/password.component';
 import { ButtonModalComponent } from './components/button-modal/button-modal.component';
 import { MessageModalComponent } from './components/message-modal/message-modal.component';
+import { CableSolverComponent } from './components/cable-solver/cable-solver.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { MessageModalComponent } from './components/message-modal/message-modal.
     PasswordComponent,
     ButtonModalComponent,
     MessageModalComponent,
+    CableSolverComponent,
   ],
   imports: [
     AppRoutingModule,

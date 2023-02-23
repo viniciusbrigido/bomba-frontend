@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Button } from '../domain/button';
-import { ButtonResponse } from '../domain/button-response';
+import { Button } from '../domain/button/button';
+import { ButtonResponse } from '../domain/button/button-response';
 import { HttpService } from './http.service';
 import { Observable } from 'rxjs';
-import { ButtonResponseSecondStep } from '../domain/button-response-second-step';
+import { ButtonResponseSecondStep } from '../domain/button/button-response-second-step';
 
 @Injectable({
   providedIn: 'root'
