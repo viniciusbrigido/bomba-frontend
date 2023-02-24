@@ -1,0 +1,12 @@
+<div id="container">
+  <section>
+    <h2>{{ data.message }}</h2>
+  </section>
+  <section *ngIf="data.keypads" id="images">
+    <img
+      *ngFor="let img of data.keypads"
+      [src]="imgPath(img)"
+      alt=""
+    >
+  </section>
+</div>

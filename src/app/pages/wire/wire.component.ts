@@ -6,7 +6,7 @@ import { colorList } from '../../enumeration/color';
 import { WireResponse } from '../../domain/wire/wire-response';
 import { Wire } from '../../domain/wire/wire';
 import { MatDialog } from '@angular/material/dialog';
-import { MessageModalComponent } from '../../components/message-modal/message-modal.component';
+import { MessageModalComponent } from '../../components/modal/message-modal/message-modal.component';
 
 @Component({
   selector: 'app-wire',

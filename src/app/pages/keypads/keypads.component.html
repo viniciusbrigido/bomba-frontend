@@ -1,1 +1,18 @@
-<p>keypads works!</p>
+<div id="container">
+  <section>
+    <mat-grid-list cols="7" rowHeight="130px">
+      <mat-grid-tile *ngFor="let keypad of keypads">
+        <app-keypad-image [img]="keypad.toString()"></app-keypad-image>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+
+  <section id="button-container">
+    <button
+      mat-raised-button
+      (click)="resolve()"
+    >
+      Resolver
+    </button>
+  </section>
+</div>

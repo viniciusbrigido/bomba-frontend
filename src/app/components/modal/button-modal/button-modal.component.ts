@@ -1,9 +1,9 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
-import { ButtonResponse } from '../../domain/button/button-response';
-import { colorList } from '../../enumeration/color';
-import { ButtonService } from '../../service/button.service';
-import { ButtonResponseSecondStep } from '../../domain/button/button-response-second-step';
+import { ButtonResponse } from '../../../domain/button/button-response';
+import { colorList } from '../../../enumeration/color';
+import { ButtonService } from '../../../service/button.service';
+import { ButtonResponseSecondStep } from '../../../domain/button/button-response-second-step';
 import { MessageModalComponent } from '../message-modal/message-modal.component';
 
 @Component({

@@ -6,10 +6,10 @@ import { Indicator } from '../../enumeration/indicator';
 import { Button } from '../../domain/button/button';
 import { ButtonResponse } from '../../domain/button/button-response';
 import { MatDialog } from '@angular/material/dialog';
-import { ButtonModalComponent } from '../../components/button-modal/button-modal.component';
+import { ButtonModalComponent } from '../../components/modal/button-modal/button-modal.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { ButtonService } from '../../service/button.service';
-import { MessageModalComponent } from '../../components/message-modal/message-modal.component';
+import { MessageModalComponent } from '../../components/modal/message-modal/message-modal.component';
 
 @Component({
   selector: 'app-button',

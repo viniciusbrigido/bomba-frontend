@@ -38,9 +38,11 @@ import { ComplicatedWireComponent } from './pages/complicated-wire/complicated-w
 import { WireSequenceComponent } from './pages/wire-sequence/wire-sequence.component';
 import { MazeComponent } from './pages/maze/maze.component';
 import { PasswordComponent } from './pages/password/password.component';
-import { ButtonModalComponent } from './components/button-modal/button-modal.component';
-import { MessageModalComponent } from './components/message-modal/message-modal.component';
+import { ButtonModalComponent } from './components/modal/button-modal/button-modal.component';
+import { MessageModalComponent } from './components/modal/message-modal/message-modal.component';
 import { CableSolverComponent } from './components/cable-solver/cable-solver.component';
+import { KeypadImageComponent } from './components/keypad-image/keypad-image.component';
+import { KeypadModalComponent } from './components/modal/keypad-modal/keypad-modal.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +65,8 @@ import { CableSolverComponent } from './components/cable-solver/cable-solver.com
     ButtonModalComponent,
     MessageModalComponent,
     CableSolverComponent,
+    KeypadImageComponent,
+    KeypadModalComponent,
   ],
   imports: [
     AppRoutingModule,
