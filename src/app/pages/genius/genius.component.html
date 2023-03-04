@@ -1,0 +1,35 @@
+<div id="container">
+  <app-square-list [colors]="colors"></app-square-list>
+
+  <section>
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Serial</mat-label>
+      <input matInput [(ngModel)]="serial">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="field">
+      <mat-label>Quantidade de Erros</mat-label>
+      <input matInput [(ngModel)]="countErrors" type="number" class="no-spinners">
+    </mat-form-field>
+  </section>
+  <section class="genius-table">
+    <app-genius-table (colorEmitter)="onClickColor($event)"></app-genius-table>
+  </section>
+
+  <section id="buttons">
+    <button
+      mat-raised-button
+      class="button"
+      (click)="resolve()"
+    >
+      Resolver
+    </button>
+    <button
+      mat-raised-button
+      class="button"
+      (click)="clearForm()"
+    >
+      Limpar
+    </button>
+    </section>
+</div>

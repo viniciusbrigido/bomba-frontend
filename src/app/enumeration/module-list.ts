@@ -23,9 +23,9 @@ export const moduleList = [
     'assets/images/module/keypads_module.png'
   ),
   new ModuleItem(
-    'Simon Says',
-    '/simon_says',
-    'assets/images/module/simon_says_module.png'
+    'Genius',
+    '/genius',
+    'assets/images/module/genius_module.png'
   ),
   new ModuleItem(
     'Who’s on First',

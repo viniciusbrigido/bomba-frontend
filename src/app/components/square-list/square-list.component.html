@@ -1,0 +1,5 @@
+<section id="container-squares">
+  <div class="square-row" *ngFor="let color of colors">
+    <div class="square" [ngStyle]="{ backgroundColor: getCorrespondentBackgroundColor(color) }"></div>
+  </div>
+</section>

@@ -21,7 +21,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
-
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -30,7 +29,6 @@ import { ModuleCardComponent } from './components/module-card/module-card.compon
 import { ButtonComponent } from './pages/button/button.component';
 import { WireComponent } from './pages/wire/wire.component';
 import { KeypadsComponent } from './pages/keypads/keypads.component';
-import { SimonSaysComponent } from './pages/simon-says/simon-says.component';
 import { WhosOnFirstComponent } from './pages/whos-on-first/whos-on-first.component';
 import { MemoryComponent } from './pages/memory/memory.component';
 import { MorseCodeComponent } from './pages/morse-code/morse-code.component';
@@ -43,6 +41,10 @@ import { MessageModalComponent } from './components/modal/message-modal/message-
 import { CableSolverComponent } from './components/cable-solver/cable-solver.component';
 import { KeypadImageComponent } from './components/keypad-image/keypad-image.component';
 import { KeypadModalComponent } from './components/modal/keypad-modal/keypad-modal.component';
+import { GeniusComponent } from './pages/genius/genius.component';
+import { GeniusTableComponent } from './components/genius-table/genius-table.component';
+import { GeniusModalComponent } from './components/modal/genius-modal/genius-modal.component';
+import { SquareListComponent } from './components/square-list/square-list.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,7 @@ import { KeypadModalComponent } from './components/modal/keypad-modal/keypad-mod
     ButtonComponent,
     WireComponent,
     KeypadsComponent,
-    SimonSaysComponent,
+    GeniusComponent,
     WhosOnFirstComponent,
     MemoryComponent,
     MorseCodeComponent,
@@ -67,6 +69,9 @@ import { KeypadModalComponent } from './components/modal/keypad-modal/keypad-mod
     CableSolverComponent,
     KeypadImageComponent,
     KeypadModalComponent,
+    GeniusTableComponent,
+    GeniusModalComponent,
+    SquareListComponent,
   ],
   imports: [
     AppRoutingModule,

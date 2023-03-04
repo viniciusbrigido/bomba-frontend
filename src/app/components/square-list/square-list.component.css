@@ -1,0 +1,19 @@
+#container-squares {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.square-row {
+  transform: rotate(45deg);
+}
+
+.square {
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+}

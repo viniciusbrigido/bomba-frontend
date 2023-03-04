@@ -8,7 +8,7 @@ export class MenuItem {
 
 export const menuList = [
   new MenuItem(
-    'Modulos',
+    'Módulos',
     'home'
   ),
   new MenuItem(
