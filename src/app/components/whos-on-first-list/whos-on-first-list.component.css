@@ -1,0 +1,19 @@
+mat-form-field {
+  /*margin: 3px;*/
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #d7d052 !important;
+}
+
+.mat-form-field.mat-form-field-fill .mat-select {
+  background-color: #d7d052 !important;
+}
+
+.mat-form-field.mat-form-field-fill .mat-option {
+  background-color: #d7d052 !important;
+}

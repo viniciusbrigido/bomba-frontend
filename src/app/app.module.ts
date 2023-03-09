@@ -45,6 +45,7 @@ import { GeniusComponent } from './pages/genius/genius.component';
 import { GeniusTableComponent } from './components/genius-table/genius-table.component';
 import { GeniusModalComponent } from './components/modal/genius-modal/genius-modal.component';
 import { SquareListComponent } from './components/square-list/square-list.component';
+import { WhosOnFirstListComponent } from './components/whos-on-first-list/whos-on-first-list.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { SquareListComponent } from './components/square-list/square-list.compon
     GeniusTableComponent,
     GeniusModalComponent,
     SquareListComponent,
+    WhosOnFirstListComponent,
   ],
   imports: [
     AppRoutingModule,

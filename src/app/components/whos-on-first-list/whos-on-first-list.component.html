@@ -1,0 +1,7 @@
+<mat-form-field>
+  <mat-select [(ngModel)]="select">
+    <mat-option *ngFor="let word of words" [value]="word">
+      {{word}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
